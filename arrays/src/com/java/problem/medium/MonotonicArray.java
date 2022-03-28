@@ -2,6 +2,7 @@ package com.java.problem.medium;
 
 public class MonotonicArray {
 
+    // Time: O(n) | Space: O(1)
     public static boolean isMonotonic(int[] array) {
         if (array == null || array.length == 0 || array.length == 1) {
             return true;
