@@ -17,17 +17,20 @@ public class LongestPeak {
                 continue;
             }
 
+            int currPeakLen = 3;
+
             int leftIdx = loop - 2;
             while (leftIdx >= 0 && array[leftIdx] < array[leftIdx + 1]) {
                 leftIdx -= 1;
+                currPeakLen += 1;
             }
 
             int rightIdx = loop + 2;
             while (rightIdx < array.length && array[rightIdx] < array[rightIdx - 1]) {
                 rightIdx += 1;
+                currPeakLen += 1;
             }
 
-            int currPeakLen = rightIdx - leftIdx - 1;
             if (currPeakLen > longestPeakLen) {
                 longestPeakLen = currPeakLen;
             }
