@@ -11,6 +11,7 @@ public class LikedListRemoveDuplicates {
         }
     }
 
+    // Time: O(n) | Space: O(1)
     public LinkedList removeDuplicatesFromLinkedList(LinkedList linkedList) {
         if (linkedList == null || linkedList.next == null) {
             return linkedList;
